@@ -27,7 +27,12 @@
                  </div>
                 <div class="form-group">
                     <label for="foto">Unit Kerja</label>
-                    <input type="text"  value="<?php echo $personal['unitkerja'] ?>" class="form-control" name="unitkerja" required="">
+                    <?php
+                  $options=array('ATM' => 'ATM', 'SPC' => 'SPC', 'CIT' =>'CIT');
+                  $batch = $personal['unitkerja'];
+                  echo form_dropdown('kelamin', $options, $batch,['class'=>'form-control']);
+                  ?>
+
                  </div>
                 <div class="form-group">
                     <label for="foto">Descperson</label>

@@ -23,6 +23,12 @@
             <span class="nav-link-text">Personal</span>
             </a>
         </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Bank">
+            <a class="nav-link" href="<?php echo site_url('Bank') ?>">
+            <i class="fa fa-fw fa-users"></i>
+            <span class="nav-link-text">Bank</span>
+            </a>
+        </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Wsid">
             <a class="nav-link" href="<?php echo site_url('Wsid') ?>">
             <i class="fa fa-fw fa-print"></i>

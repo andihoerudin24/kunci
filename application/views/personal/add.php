@@ -23,12 +23,16 @@
                    </div>
                 <div class="form-group">
                     <label for="foto">Departemen</label>
-                    <input type="text" class="form-control" name="dept" required="">
+                    <input type="text" class="form-control" readonly value="operasional" name="dept" required="">
                  </div>
                 <div class="form-group">
                     <label for="foto">Unit Kerja</label>
-                    <input type="text" class="form-control" name="unitkerja" required="">
-                 </div>
+                   <select name="unitkerja" class="form-control">
+                     <option value="ATM">ATM</option>
+                     <option value="SPC">SPC</option>
+                     <option value="CIT">CIT</option>
+                   </select>
+                </div>
                 <div class="form-group">
                     <label for="foto">Descperson</label>
                     <input type="text" class="form-control" name="descperson" required="">
