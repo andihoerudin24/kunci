@@ -27,6 +27,13 @@ Class Trip extends CI_Controller{
 
     }
 
+    public function show()
+    {
+        $id=$this->uri->segment(3);
+        $data['trip']=$this->db->get_where('tbl_trip',array('idtrip'=>$id))->row_Array();
+        $this->template->load('template','trip/detail',$data);
+    }
+
     public function edit()
     {
         if(isset($_POST['submit'])){
@@ -34,7 +41,7 @@ Class Trip extends CI_Controller{
               redirect('Trip');
       }else{
             $id=$this->uri->segment(3);
-            $data['trip']=$this->db->get_where('tbl_trip',array('idtrip'))->row_Array();
+            $data['trip']=$this->db->get_where('tbl_trip',array('idtrip'=>$id))->row_Array();
             $this->template->load('template','trip/edit',$data);
         }
 
