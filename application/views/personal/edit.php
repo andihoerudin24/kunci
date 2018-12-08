@@ -30,7 +30,7 @@
                     <?php
                   $options=array('ATM' => 'ATM', 'SPC' => 'SPC', 'CIT' =>'CIT');
                   $batch = $personal['unitkerja'];
-                  echo form_dropdown('kelamin', $options, $batch,['class'=>'form-control']);
+                  echo form_dropdown('unitkerja', $options, $batch,['class'=>'form-control']);
                   ?>
 
                  </div>
