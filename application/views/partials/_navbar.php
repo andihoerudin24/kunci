@@ -35,6 +35,12 @@
             <span class="nav-link-text">Wsid</span>
             </a>
         </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Keyset">
+            <a class="nav-link" href="<?php echo site_url('Keyset') ?>">
+            <i class="fa fa-fw fa-print"></i>
+            <span class="nav-link-text">KUNCI SET</span>
+            </a>
+        </li>
      </ul>
         <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">

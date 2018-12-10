@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 07, 2018 at 04:12 PM
+-- Generation Time: Dec 10, 2018 at 03:13 AM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -86,7 +86,7 @@ CREATE TABLE `tb_personal` (
 INSERT INTO `tb_personal` (`id_personal`, `nama_personal`, `dept`, `unitkerja`, `descperson`, `idtrip`) VALUES
 (123929, 'nama personal edit', 'departemen', 'ATM', 'descripsi oke edit', 3),
 (87382732, 'amir', 'departemen', 'SPC', 'deskripsi nya itu dsni', 2),
-(2147483647, 'nama perosnal', 'departemen', 'CIT', 'descripsi oke ', 2);
+(2147483647, 'nama perosnal', 'departemen', 'CIT', 'descripsi oke ', 4);
 
 --
 -- Indexes for dumped tables
