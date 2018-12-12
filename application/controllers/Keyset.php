@@ -21,7 +21,9 @@ class Keyset extends CI_Controller{
                $this->Model_keyset->add();
                  redirect('Keyset');
         }else{
-            $this->template->load('template','keyset/add');
+            $data['keyset']=$this->db->get('tbl_wsid')->result();
+
+            $this->template->load('template','keyset/add',$data);
         }
     }
 

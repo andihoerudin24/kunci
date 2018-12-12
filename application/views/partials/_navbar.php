@@ -41,6 +41,18 @@
             <span class="nav-link-text">KUNCI SET</span>
             </a>
         </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Kendaraan">
+            <a class="nav-link" href="<?php echo site_url('Kendaraan') ?>">
+            <i class="fa fa-fw fa-print"></i>
+            <span class="nav-link-text">KENDARAAN</span>
+            </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Penjadwalan Trip">
+            <a class="nav-link" href="<?php echo site_url('Transaksi_keluar') ?>">
+            <i class="fa fa-fw fa-print"></i>
+            <span class="nav-link-text">Penjadwalan Trip</span>
+            </a>
+        </li>
      </ul>
         <ul class="navbar-nav sidenav-toggler">
         <li class="nav-item">

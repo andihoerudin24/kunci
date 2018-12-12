@@ -66,7 +66,6 @@
         </div>
     </div>
 </div>
-<script src
 <script type="text/javascript">
    function show() {
        var idtrip =$("#idtrip").val()

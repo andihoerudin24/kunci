@@ -23,13 +23,21 @@
                <div class="col-md-4">
                  <div class="form-group">
                         <label for="Nama Trip">Jenis Key</label>
-                    <input type="text" class="form-control" name="jeniskey" >
+                        <select name="jeniskey" class="form-control">
+                            <option value="ATM">ATM</option>
+                            <option value="ATS">ATS</option>
+                            <option value="START">START</option>
+                        </select>
                   </div>
                 </div>
                <div class="col-md-4">
                  <div class="form-group">
-                        <label for="Nama Trip">Type Wsid</label>
-                        <?php echo cmb_dinamis('idwsid','tbl_wsid','typewsid','idwsid') ?>
+                        <label for="Nama Trip">ID Wsid</label>
+                     <select name="idwsid" class="form-control">
+                        <?php foreach($keyset as $row):  ?>
+                            <option value="<?php echo $row->idwsid?>"><?php echo $row->idwsid ,'-'.$row->locationwsid  ?></option>
+                        <?php endforeach; ?>
+                     </select>
                    </div>
                 </div>
               </div>
