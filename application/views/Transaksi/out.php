@@ -113,7 +113,10 @@
                     </tbody>
                 </table>
                 <hr>
-            </div>
+                <?php echo form_open('Transaksi_keluar/insert') ?>
+                <label>Deskripsi</label>
+                <textarea class="form-control" name="deskripsi"></textarea>
+           </div>
             <div class="col-md-3">
                 <div class="card-body">
                 <table class="table table-bordered">
@@ -121,7 +124,6 @@
                     <th>Chek Out</th>
                     <th>Chek in</th>
                  </tr>
-                 <?php echo form_open('Transaksi_keluar/insert') ?>
                  <?php echo form_hidden('id_keyset',$this->uri->segment(3)) ?>
                  <?php for($i=1;$i<16;$i++): ?>
                     <tr>
@@ -134,10 +136,11 @@
                     </tr>
                  <?php endfor; ?>
                  </table>
+
+             </div>
                  <button type="submit" name="submit" class="btn btn-info">Submit</button>
                  <button type="submit" class="btn btn-info">Kembali</button>
                  <?php echo form_close() ?>
-                </div>
             </div>
           </div>
         </div>
