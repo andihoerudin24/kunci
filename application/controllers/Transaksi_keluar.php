@@ -9,7 +9,7 @@ class Transaksi_keluar extends CI_Controller{
         $this->db->join('tbl_bank','tbl_bank.idbank = tbl_wsid.idbank');
         $this->db->join('tbl_trip','tbl_trip.idtrip = tbl_wsid.idtrip');
         $this->db->join('tb_personal','tb_personal.idtrip = tbl_trip.idtrip');
-        $this->db->where('tbl_keyset.status',0);
+       //$this->db->where('tbl_keyset.status',0);
         $data['transaksi']=$this->db->get()->result();
         $this->template->load('template','Transaksi/keluar',$data);
      }
@@ -57,13 +57,13 @@ class Transaksi_keluar extends CI_Controller{
      public function Keluar()
      {
         $this->db->select('*');
-        $this->db->from('tbl_keyset');
+        $this->db->from('tbl_kunci_keluar');
+        $this->db->join('tbl_keyset','tbl_keyset.idkeyset = tbl_kunci_keluar.id_keyset');
         $this->db->join('tbl_wsid','tbl_wsid.idwsid = tbl_keyset.idwsid');
         $this->db->join('tbl_bank','tbl_bank.idbank = tbl_wsid.idbank');
         $this->db->join('tbl_trip','tbl_trip.idtrip = tbl_wsid.idtrip');
         $this->db->join('tb_personal','tb_personal.idtrip = tbl_trip.idtrip');
-        $this->db->join('tbl_kunci_keluar','tbl_kunci_keluar.id_keyset = tbl_keyset.idkeyset');
-        $this->db->where('tbl_keyset.status',1);
+        $this->db->where('tbl_kunci_keluar.status_induk',0);
         $data['transaksi']=$this->db->get()->result();
         $this->template->load('template','Transaksi/sedang_keluar',$data);
      }

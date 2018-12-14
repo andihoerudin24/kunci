@@ -15,7 +15,8 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                        <th>No</th>
+                            <th>No</th>
+                            <th>ID WSID</th>
                             <th>TYPE WSID</th>
                             <th>LOCATION WSID</th>
                             <th>MERK WSID</th>
@@ -28,6 +29,7 @@
                     <tfoot>
                         <tr>
                             <th>No</th>
+                            <th>ID WSID</th>
                             <th>TYPE WSID</th>
                             <th>LOCATION WSID</th>
                             <th>MERK WSID</th>
@@ -42,6 +44,7 @@
                     <?php foreach ($wsid as $item) : ?>
                         <tr>
                             <td><?php echo $no ?></td>
+                            <td><?php echo $item->idwsid ?></td>
                             <td><?php echo $item->typewsid?> </td>
                             <td><?php echo $item->locationwsid ?></td>
                             <td><?php echo $item->merkwsid ?></td>

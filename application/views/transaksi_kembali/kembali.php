@@ -1,9 +1,9 @@
 <div class="container-fluid">
     <ol class="breadcrumb">
         <li class="breadcrumb-item">
-            <a href="#">Transaksi Keluar</a>
+            <a href="#">Transaksi Kembali Kunci</a>
         </li>
-        <li class="breadcrumb-item active">Transaksi Keluar</li>
+        <li class="breadcrumb-item active">Transaksi Kembali Kunci</li>
     </ol>
     <div class="card mb-3">
         <div class="card-header">
@@ -20,7 +20,6 @@
                  </tr>
                  <?php echo form_open('Transaksi_kembali/insert_kembali') ?>
                  <?php echo form_hidden('id_transaksi_out',$this->uri->segment(3)) ?>
-                 <?php echo form_hidden('id_personal',$transaksi['id_personal']) ?>
                  <?php for($i=1;$i<16;$i++): ?>
                     <tr>
                     <td><?php echo $i ?></td>
@@ -34,11 +33,20 @@
                     </tr>
                  <?php endfor; ?>
                  </table>
-             </div>
-            <div class="col-md-12">
+              </div>
+            <div class="col-md-6">
                 <div class="card-body">
                 <table class="table table-bordered">
-                        <textarea class="form-control" name="deskripsi"></textarea>
+                <label>Deskripsi</label>
+                        <textarea class="form-control" placeholder="deskripsi" name="deskripsi"></textarea>
+                 </table>
+              </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card-body">
+                <table class="table table-bordered">
+                   <label>ID Personal</label>
+                     <input type="number" class="form-control" placeholder="id_personal" name="id_person">
                  </table>
               </div>
                  <button type="submit" name="submit" class="btn btn-info">Submit</button>

@@ -42,7 +42,7 @@
                                        Detail
                                     <span class="btn-label btn-label-right"><i class="fa fa-eye"></i></span>
                                 </a>
-                          </td>
+                           </td>
                         </tr>
                    <?php endforeach; ?>
                     </tbody>

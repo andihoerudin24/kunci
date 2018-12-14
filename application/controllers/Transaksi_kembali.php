@@ -58,7 +58,7 @@ class Transaksi_kembali extends CI_Controller{
                'statekeyin15'=>$this->input->post('statekeyin15'),
                'deskripsi'  =>$this->input->post('deskripsi'),
                'id_transaksi_out'=>$this->input->post('id_transaksi_out'),
-               'id_person'=>$this->input->post('id_personal')
+               'id_person'=>$this->input->post('id_person')
            ];
            $this->db->insert('tbl_kunci_kembali',$data);
            $update=[
@@ -74,7 +74,15 @@ class Transaksi_kembali extends CI_Controller{
 
    public function selesai()
    {
-      $this->template->load('template','transaksi_kembali/selesai');
+        $this->db->select('*');
+        $this->db->from('tbl_kunci_kembali');
+        $this->db->join('tbl_kunci_keluar','tbl_kunci_keluar.id_transaksi_out = tbl_kunci_kembali.id_transaksi_out');
+        $this->db->join('tbl_keyset','tbl_keyset.idkeyset = tbl_kunci_keluar.id_keyset');
+        $this->db->join('tbl_wsid','tbl_wsid.idwsid = tbl_keyset.idwsid');
+        $this->db->join('tbl_bank','tbl_bank.idbank = tbl_wsid.idbank');
+        $this->db->join('tb_personal','tb_personal.idtrip = tbl_wsid.idtrip');
+        $data['selesai']=$this->db->get()->result();
+        $this->template->load('template','transaksi_kembali/selesai',$data);
    }
 
 
